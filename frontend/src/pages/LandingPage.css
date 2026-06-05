@@ -1,0 +1,165 @@
+/* Google Fonts Import for Inter and Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* The new complex, mixed-texture background */
+.landing-bg {
+  /* BASE BLUE */
+  background-color: #f0f7ff;
+  color: #1a202c; /* Updated dark gray/slate for text */
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Glowing Textures (The 'Mixed' part) */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 1; /* Sits behind content, but in front of background color */
+  opacity: 0.15; /* Subtly soft, as requested */
+}
+.orb-purple { top: -150px; left: -150px; width: 600px; height: 600px; background: #c084fc; } /* Violet Glow */
+.orb-pink { bottom: -150px; right: -150px; width: 600px; height: 600px; background: #f472b6; } /* Pink Glow */
+
+/* Clean, transparent, fixed top navbar */
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Stays on very top */
+  background: rgba(240, 247, 255, 0.7); /* Match base blue, slightly clear */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-brand { font-size: 1.6rem; font-weight: 800; cursor: pointer; color: #111827; letter-spacing: -1px; }
+.nav-brand span { color: #2563eb; } /* Kept blue brand highlight */
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links button {
+  background: none; border: none; color: #4b5563;
+  text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; cursor: pointer;
+}
+.nav-links button:hover { color: #111827; }
+
+/* Redesigned 'Sign Up Free' Button and Login */
+.btn-login { background: none; border: none; color: #111827; font-weight: 600; cursor: pointer; }
+.btn-signup-pill {
+  background: #2563eb; /* Primary blue kept */
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+  transition: transform 0.2s;
+}
+.btn-signup-pill:hover { transform: translateY(-2px); }
+
+/* Updated Hero Section with new spacing */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 160px 8% 80px 8%; /* Adjust for fixed nav */
+  position: relative;
+  z-index: 10;
+}
+
+.hero-left { flex: 1.2; padding-right: 5%; }
+.hero-right { flex: 0.8; display: flex; justify-content: center; }
+
+/* The AI-driven headline */
+.hero-left h1 {
+  font-size: 4.8rem;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  font-weight: 800;
+  margin-bottom: 2.2rem;
+  color: #111827;
+}
+.hero-left h1 span { color: #2563eb; } /* Kept bluebrand highlight */
+
+/* Punchy descriptive lines */
+.hero-left p {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  margin-bottom: 3.8rem;
+  color: #4b5563;
+  max-width: 90%;
+}
+.hero-left p span { color: #2563eb; font-weight: 600; } /* Blue highlight */
+
+/* New button group logic from original */
+.hero-actions { display: flex; gap: 1.5rem; }
+
+.btn-primary {
+  background: #2563eb; /* Kept blue brand */
+  color: #fff;
+  border: none;
+  padding: 1.2rem 2.8rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  padding: 1.2rem 2.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Updated badge from original */
+.badge {
+  background: #eff6ff; /* Soft blue */
+  color: #2563eb;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 25px;
+  border: 1px solid #dbeafe;
+}
+
+/* NEW: Simplified mockup of code window (right side) */
+.code-window {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.05);
+}
+
+.window-header {
+  background: #f9fafb;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+.file-name { color: #6b7280; font-size: 0.8rem; margin-left: 10px; font-family: 'Fira Code', monospace; }
+
+.window-body { padding: 30px; font-family: 'Fira Code', monospace; font-size: 0.95rem; line-height: 1.8; color: #1f2937; }
+.keyword { color: #c678dd; } .func { color: #61afef; } .comment { color: #9ca3af; }
