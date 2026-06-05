@@ -178,6 +178,4 @@ Please ensure your code adheres to the existing styling conventions and that all
 
 ---
 
-<div align="center">
-  <p>Built with ❤️ by developers, for developers.</p>
-</div>
+
