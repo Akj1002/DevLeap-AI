@@ -1,43 +1,86 @@
+<div align="center">
+
 # ⚡ DevLeap AI
 
-<div align="center">
-  <p><strong>The Ultimate Full-Stack Developer Ecosystem & Mock Interview Platform</strong></p>
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-  [![Node.js Version](https://img.shields.io/badge/Node.js-v18+-green.svg)](https://nodejs.org/)
-  [![React Version](https://img.shields.io/badge/React-18.x-61dafb.svg)](https://reactjs.org/)
-  [![MongoDB](https://img.shields.io/badge/MongoDB-Enabled-47A248.svg)](https://www.mongodb.com/)
-  [![AI](https://img.shields.io/badge/AI-Google_Gemini-FF6F00.svg)](https://deepmind.google/technologies/gemini/)
+**The Ultimate Full-Stack Developer Ecosystem & Mock Interview Platform**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/Node.js-v18+-green.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![React Version](https://img.shields.io/badge/React-18.x-61dafb.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Enabled-47A248.svg?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+[![AI](https://img.shields.io/badge/AI-Google_Gemini-FF6F00.svg?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
+
+_DevLeap AI is a massive, interconnected ecosystem engineered to take developers from their first line of code to their senior engineering interview._
+
+[Explore The Features](#-the-devleap-ecosystem) • [Architecture Deep-Dive](#-system-architecture) • [Getting Started](#-quick-start-guide) • [Contributing](#-contributing-to-devleap)
+
 </div>
-
-<br />
-
-DevLeap AI is not just another coding platform—it is a massive, interconnected ecosystem designed specifically for modern software engineers. Spanning over 15 advanced modules, DevLeap acts as an all-in-one hub for algorithmic mastery, system design practice, peer-to-peer mentorship, and AI-driven technical interview preparation.
 
 ---
 
-## 📑 Table of Contents
-- [System Architecture](#-system-architecture)
-- [Project Directory Structure](#-project-directory-structure)
-- [The DevLeap Ecosystem](#-the-devleap-ecosystem)
-- [Core Functional Pillars](#-core-functional-pillars)
-- [Tech Stack & Integrations](#-tech-stack--integrations)
-- [Zero-Mock Data & Seed-on-Demand](#-zero-mock-data--seed-on-demand)
-- [Getting Started](#-getting-started)
+## 🌌 The Vision
+
+The modern developer's journey is fragmented. You practice algorithms on one site, mock interviews on another, track jobs on a third, and build your portfolio somewhere else entirely. 
+
+**DevLeap AI unifies the developer lifecycle.** We have engineered over 15 distinct, interconnected modules—ranging from a LeetCode-style problem tracker to real-time WebRTC peer interviews—all unified under a single, seamless, gamified ecosystem. Driven by **Google's Gemini AI**, DevLeap acts as your relentless mentor, pair programmer, and senior code reviewer.
+
+---
+
+## 🌐 The DevLeap Ecosystem
+
+DevLeap is partitioned into interactive environments, each tailored to a specific phase of your career:
+
+<details open>
+<summary><b>🔥 Technical Interview Mastery</b></summary>
+
+* **The Problems Arena:** A robust execution sandbox featuring 1,000+ algorithmic challenges. Features dynamic tagging (Difficulty, Topic, Company Frequency) and real-time execution analytics (time/space complexity).
+* **Interactive AI Interviews:** Powered by Gemini 1.5. Engage in dynamic behavioral and technical loops where the AI analyzes your vocal cadence, code quality, and edge-case handling to simulate FAANG-level pressure.
+* **Peer-to-Peer Interview Matching:** A proprietary matching algorithm pairs you with developers globally. Enter a synchronized WebRTC video-call room with a shared live-code editor to grill each other on technical concepts.
+</details>
+
+<details open>
+<summary><b>🛡️ Community & Competitive Programming</b></summary>
+
+* **Multiplayer Code Racing:** A real-time competitive programming arena. Type out solutions, track your Elo rating, and climb the global leaderboard.
+* **Developer Guilds:** Join community clans, pool your XP, and conquer weekly global algorithmic quests (e.g., "Solve 100 Hard DSA as a team").
+* **Hackathons Portal:** End-to-end event management with live voting, countdowns, and team-building capabilities.
+* **The Discussion Forum:** A vibrant, threaded forum to debate optimal solutions and system design tradeoffs, backed by a reputation system.
+</details>
+
+<details open>
+<summary><b>📐 Architecture & Learning</b></summary>
+
+* **Live System Design Whiteboard:** An interactive drag-and-drop canvas for mapping out cloud architectures. Save your designs directly to MongoDB and share them with the community.
+* **AI Code Review Engine:** Submit raw code snippets. The AI agent conducts rigorous, line-by-line static analysis, leaving threaded inline comments highlighting vulnerabilities and architectural anti-patterns.
+* **Master Learning Roadmaps:** A highly visual, node-based interactive tree mapping out role-specific paths for Frontend, Backend, DevOps, and Data Science.
+</details>
+
+<details open>
+<summary><b>💼 Career Advancement</b></summary>
+
+* **Freelance Bounties:** A gig-board for bidding on real-world coding issues. Solve problems, build your open-source portfolio, and earn rewards.
+* **Tech Job Board:** Aggregated listings featuring debounced full-text search, multi-filters, quick apply modals, and salary tracking.
+* **Mentorship Network:** Find and dynamically book 1-on-1 sessions with industry experts.
+* **Project Showcase:** A Dribbble-style portfolio feed to collect upvotes on your side projects and browse trending tech stacks.
+</details>
 
 ---
 
 ## 🏗 System Architecture
 
-DevLeap AI is built upon a highly scalable, monolithic **MERN** stack architecture (MongoDB, Express, React, Node.js), augmented by real-time WebRTC channels and Google's advanced Gemini AI models. 
+DevLeap AI is built upon a highly scalable, monolithic **MERN** stack architecture, augmented by real-time protocols and advanced LLMs.
 
-### Backend Data Flow
-The backend utilizes Express.js routers heavily modularized across 20+ distinct data domains (Users, Problems, Contests, SystemDesigns, Guilds, etc.). Every single feature on the frontend is rigorously backed by a corresponding Mongoose schema. This ensures total data persistence, strict referential integrity across interconnected models, and a completely dynamic user experience without any hardcoded static JSON data. 
-- **Security:** Integrated `express-rate-limit`, `helmet` for HTTP header security, and CORS policies configured for dedicated frontend origins.
-- **AI Microservices:** AI routes (like `/api/ai-pair` and `/api/codereviews`) interact directly with `@google/genai` to dynamically execute code reviews and generate conversational behavioral interview flows.
+### 🗄️ Backend Data Flow & Security
+* **Modular Routing:** Express.js routers are deeply modularized across 20+ distinct data domains (`/api/users`, `/api/coderace`, `/api/guilds`, etc.).
+* **Referential Integrity:** Every feature is rigorously backed by a custom Mongoose schema. We utilize complex MongoDB Aggregation Pipelines for generating leaderboards and analytics.
+* **Zero-Trust Security:** Integrated `express-rate-limit` to prevent brute force attacks, `helmet` for strict HTTP header security, JWT for stateless authentication, and `bcryptjs` for password hashing.
+* **AI Microservices:** Routes like `/api/ai-pair` interact directly with `@google/genai` to stream conversational context and execute static code reviews dynamically.
 
-### Frontend Data Flow
-The React 18 application utilizes `React Router v6` for extensive client-side routing across 15+ complex views. Global state management is handled elegantly through React Context API and custom hooks. The UI utilizes CSS Modules and inline theming to deliver a unified, premium dark-mode aesthetic with glassmorphism interactions.
+### 💻 Frontend React Engineering
+* **Client-Side Routing:** `React Router v6` handles complex, nested layouts and guarded routes.
+* **State & Networking:** Global state is managed via Context API. Axios interceptors seamlessly inject JWT tokens into protected API calls.
+* **Real-Time Communications:** `useWebRTC` custom hooks manage RTCPeerConnections and STUN/TURN server negotiations for flawless peer-to-peer video streaming.
+* **Glassmorphism UI:** CSS Modules and inline theming deliver a unified, premium dark-mode aesthetic.
 
 ---
 
@@ -46,136 +89,95 @@ The React 18 application utilizes `React Router v6` for extensive client-side ro
 ```text
 DevLeap-AI/
 ├── backend/
-│   ├── config/          # Database, Logger, and Swagger configuration
-│   ├── middleware/      # Auth, Error Handling, Security, Rate Limiting
-│   ├── models/          # 20+ Mongoose Schemas (Bounty, CodeRace, Mentor, etc.)
+│   ├── config/          # DB, Logger, and Swagger config
+│   ├── middleware/      # Auth, Error Handling, Rate Limiting
+│   ├── models/          # 20+ Mongoose Schemas
 │   ├── routes/          # Express API controllers
-│   ├── scripts/         # DB Seed scripts and automation
+│   ├── scripts/         # Intelligent DB Seed scripts
 │   ├── server.js        # Main Express entry point
 │   └── package.json
 └── frontend/
     ├── public/
     ├── src/
-    │   ├── components/  # Reusable UI components (Navbar, AuthForm, Chatbot)
+    │   ├── components/  # Reusable UI (Navbar, AuthForm, Chatbot)
     │   ├── context/     # GlobalState context providers
     │   ├── hooks/       # Custom hooks (useWebRTC, useAuth)
     │   ├── pages/       # 15+ Core Application Views
-    │   ├── services/    # Axios API networking logic
-    │   ├── App.js       # Main React Router configuration
-    │   └── index.css    # Global design tokens and utilities
+    │   ├── services/    # Axios API networking
+    │   ├── App.js       # React Router configuration
+    │   └── index.css    # Global design tokens
     └── package.json
 ```
 
 ---
 
-## 🌐 The DevLeap Ecosystem
-
-Our ecosystem is partitioned into discrete environments, each tailored to a specific phase of a developer's lifecycle:
-
-| Environment | Description | Focus Area |
-| :--- | :--- | :--- |
-| **System Design** | An interactive drag-and-drop canvas for mapping out cloud architectures. | Architecture, Scalability |
-| **Freelance Bounties** | A gig-board for bidding on real-world coding issues and earning rewards. | Portfolio, Open Source |
-| **Developer Guilds** | Community clans pooling XP to conquer weekly global algorithmic quests. | Community, Collaboration |
-| **Hackathons** | End-to-end event management with live voting, countdowns, and team building. | Innovation, Prototyping |
-| **Code Racing** | Multiplayer arena for real-time competitive programming matches. | Speed, Syntax Mastery |
-| **Showcase Feed** | A Dribbble-like portfolio feed to collect upvotes on side projects. | Personal Branding |
-| **Job Board** | Aggregated tech listings with one-click applying and salary tracking. | Career Advancement |
-| **Mentorship** | Find and book 1-on-1 sessions with industry experts from FAANG. | Guidance, Networking |
-
----
-
-## 🧠 Core Functional Pillars
-
-### 1. The Problems Arena (DSA Tracker)
-A robust, LeetCode-style problem-solving environment featuring over 1,000 algorithmic challenges. Problems are tagged by difficulty and company frequency. A comprehensive dashboard tracks your solving velocity, streak consistency, and topic mastery over time.
-
-### 2. Interactive AI Interviews
-A groundbreaking feature utilizing Gemini 1.5. Participate in dynamic behavioral and technical interviews where the AI analyzes your code, vocal responses, and time complexity in real-time to simulate an actual senior engineering loop. It includes target-company preparation to mimic specific FAANG interview loops.
-
-### 3. Collaborative AI Pair Programming
-A WebIDE integrated directly with Gemini. Experience context-aware autocomplete, terminal emulation, and instant bug detection while sharing the editor environment with the AI.
-
-### 4. Master Learning Roadmaps
-A highly visual, node-based interactive tree mapping out the path from junior to senior engineer. It includes role-specific paths for Frontend, Backend, DevOps, and Data Science. As you learn, check off nodes to track your mastery.
-
-### 5. Peer-to-Peer Interview Matching
-Tinder-like matching algorithm for developers seeking mock interviews. Once matched, users enter a synchronized WebRTC video-call room with a shared live-code editor to grill each other on technical concepts and leave actionable post-interview reviews.
-
-### 6. AI Code Review Engine
-Submit GitHub PR links or raw code snippets. The AI agent conducts rigorous, line-by-line static analysis, leaving actionable, threaded inline comments highlighting potential vulnerabilities, time-complexity bottlenecks, and architectural anti-patterns.
-
-### 7. Global Contests Arena
-Put your skills to the ultimate test in global coding contests. Features live leaderboards calculating your position in real-time as you submit passing solutions. Backed by a comprehensive Elo-style rating system.
-
-### 8. The Developer Community
-A vibrant, integrated discussion forum where developers solve problems together. Deep dive into specific algorithms, share optimal solutions, or discuss system design tradeoffs. Earn reputation points by helping others and upvoting high-quality answers.
-
----
-
-## 🛠 Tech Stack & Integrations
-
-### Frontend Technologies
-* **Core:** React 18, React Router DOM (v6)
-* **Styling:** Custom CSS, CSS Modules, Tailwind-inspired inline theming
-* **State Management:** Context API & React Hooks
-* **Networking & Comms:** Axios (REST), WebRTC (Peer-to-Peer Video)
-* **Tooling:** Create React App, Webpack
-
-### Backend Technologies
-* **Core:** Node.js, Express.js
-* **Database:** MongoDB, Mongoose ODM
-* **AI Integration:** `@google/genai` (Gemini 1.5 Flash/Pro models)
-* **Security & Optimization:** Helmet, CORS, Express-Rate-Limit, bcryptjs
-* **DevOps Utilities:** Dotenv, Nodemon
-
----
-
 ## 🪄 Zero-Mock Data & Seed-on-Demand
 
-To guarantee a production-grade experience out of the box, DevLeap utilizes a sophisticated **"Seed-on-Demand"** architecture. 
+To guarantee a production-grade experience out of the box, DevLeap utilizes a sophisticated **"Seed-on-Demand"** hydration architecture. 
 
-Absolutely no mock data is hardcoded into the React frontend components. Instead, the application features an intelligent hydration mechanism: if an empty MongoDB collection is detected upon visiting a page, the frontend automatically intercepts the request and triggers a `POST` request to hidden `/seed/bulk` API endpoints. The backend instantly injects rich, realistic sample data directly into MongoDB. This ensures the ecosystem feels alive and populated immediately upon your first deployment, while remaining purely data-driven.
+Absolutely no mock data is hardcoded into the React frontend. If the application detects an empty MongoDB collection upon visiting a page, the frontend automatically intercepts the request and triggers a `POST` to hidden `/seed/bulk` API endpoints. The backend instantly injects rich, mathematically realistic sample data directly into MongoDB. This ensures the ecosystem feels alive and populated immediately upon your first deployment!
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start Guide
+
+Ready to deploy the ultimate developer ecosystem locally?
 
 ### Prerequisites
-* Node.js (v18 or higher)
-* MongoDB (Local instance or MongoDB Atlas URI)
-* Google Gemini API Key
+* **Node.js** (v18 or higher)
+* **MongoDB** (Local instance or MongoDB Atlas cluster)
+* **Google Gemini API Key** (Get one from Google AI Studio)
 
-### Local Development Setup
+### 1. Clone & Install
+```bash
+git clone https://github.com/Akj1002/DevLeap-AI.git
+cd DevLeap-AI
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Akj1002/DevLeap-AI.git
-   cd DevLeap-AI
-   ```
+### 2. Configure the Backend
+```bash
+cd backend
+npm install
+```
+Create a `.env` file in the `backend/` directory:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+GEMINI_API_KEY=your_gemini_api_key
+JWT_SECRET=your_super_secret_jwt_key
+```
+Start the backend development server:
+```bash
+npm run dev
+```
 
-2. **Configure & Run the Backend:**
-   ```bash
-   cd backend
-   npm install
-   ```
-   *Create a `.env` file in the `backend` directory:*
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   GEMINI_API_KEY=your_gemini_api_key
-   ```
-   *Start the backend development server:*
-   ```bash
-   npm run dev
-   ```
+### 3. Configure the Frontend
+Open a new terminal window:
+```bash
+cd frontend
+npm install
+npm start
+```
 
-3. **Configure & Run the Frontend:**
-   ```bash
-   cd ../frontend
-   npm install
-   npm start
-   ```
+### 4. Experience the Platform
+Navigate to `http://localhost:3000`. The Seed-on-Demand architecture will automatically populate your database with challenges, system designs, bounties, guilds, and users as you explore!
 
-4. **Experience the Magic:**
-   Open your browser and navigate to `http://localhost:3000`. The Seed-on-Demand architecture will automatically populate your database with challenges, system designs, bounties, guilds, and users as you explore the modules!
+---
+
+## 🤝 Contributing to DevLeap
+
+We believe in the power of open-source. Whether you're fixing bugs, improving documentation, or proposing new ecosystem modules, your contributions are welcome!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please ensure your code adheres to the existing styling conventions and that all Mongoose schemas are properly validated.
+
+---
+
+<div align="center">
+  <p>Built with ❤️ by developers, for developers.</p>
+</div>
